@@ -1,0 +1,27 @@
+<!-- templates/age_calculator.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Age Calculator</h1>
+    <form method="POST">
+        <label for="birth_date">Enter your birth date:</label>
+        <input type="date" name="birth_date" required>
+        <br>
+        <label for="current_date">Enter the current date:</label>
+        <input type="date" name="current_date" required>
+        <br>
+        <input type="submit" value="Calculate Age">
+    </form>
+    {% if age %}
+    <h2>Your Age:</h2>
+    <p>{{ age }}</p>
+    {% endif %}
+</body>
+</html>
