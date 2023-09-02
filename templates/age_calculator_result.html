@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Age Calculator Result</h1>
+    <h2>Age:</h2>
+    <p>Years, Months, Days: {{ age_result.years_months_days }}</p>
+    <p>Months, Days: {{ age_result.months_days }}</p>
+    <p>Weeks, Days: {{ age_result.weeks_days }}</p>
+    <p>Days: {{ age_result.days }}</p>
+    <p>Hours: {{ age_result.hours }}</p>
+    <p>Minutes: {{ age_result.minutes }}</p>
+    <p>Seconds: {{ age_result.seconds }}</p>
+</body>
+</html>
